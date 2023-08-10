@@ -1,27 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+}
+
+.dancing {
+  font-family: 'Dancing Script', cursive;
+}
+
+.background-color {
+  background: linear-gradient(90deg, rgb(18, 23, 37) 0%, rgba(46,46,65,1) 100%, rgba(0,212,255,1) 100%);
+}
+
+.btn-primary {
+  @apply text-white bg-primary px-7 py-2 rounded-full hover:opacity-90 transition-all
+}
+
+.slick-dots {
+  @apply !flex justify-start w-full ps-20;
+}
+
+.slick-dots .slick-active div {
+  @apply bg-primary w-5 h-3 !mt-8;
+}
+
+.slick-dots div {
+  @apply !m-0 !mt-8;
 }
