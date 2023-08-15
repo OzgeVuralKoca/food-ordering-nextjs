@@ -2,6 +2,7 @@ import Carousel from '@/components/Carousel'
 import Campaign from "@/components/Campaign"
 import MenuWrapper from '@/components/product/MenuWrapper'
 import About from '@/components/About'
+import Reservation from '@/components/Reservation'
 
 const index = () => {
   return (
@@ -10,6 +11,7 @@ const index = () => {
       <Campaign />
       <MenuWrapper />
       <About />
+      <Reservation />
     </div>
   )
 }
